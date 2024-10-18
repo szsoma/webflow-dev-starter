@@ -1,0 +1,30 @@
+{
+  "name": "webflow-dev-starter",
+  "version": "1.0.0",
+  "description": "Webflow development environment",
+  "main": "app.js",
+  "scripts": {
+    "start": "parcel app.js --hmr-port 50619"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szsoma/webflow-dev-starter.git"
+  },
+  "author": "Soma Szoboszlai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/szsoma/webflow-dev-starter/issues"
+  },
+  "homepage": "https://github.com/szsoma/webflow-dev-starter#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
+    "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
+    "punycode": "^2.3.1",
+    "rimraf": "^6.0.1",
+    "split-type": "^0.3.4"
+  }
+}
