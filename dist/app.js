@@ -589,22 +589,36 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 // █▀ ▀█▀ ▄▀█ █▀█ ▀█▀ █▀▀ █▀█   ▀█▀ █▀▀ █▀▄▀█ █▀█ █░░ ▄▀█ ▀█▀ █▀▀
 // ▄█ ░█░ █▀█ █▀▄ ░█░ ██▄ █▀▄   ░█░ ██▄ █░▀░█ █▀▀ █▄▄ █▀█ ░█░ ██▄
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+// * Import custom Styles
 var _styleCss = require("./src/styles/style.css");
-// import gsap from 'gsap'  // TODO [import GSAP have to import in the function's js file]
 var _home = require("./src/pages/Home/home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
 // import ScrollTrigger from 'gsap/ScrollTrigger'  // TODO [import GSAP have to import in the function's js file]
 // TODO don't forget to register plugins if you want to use GSAP
 //gsap.registerPlugin(ScrollTrigger, Flip);
-//GLOBAL SCRIPTS
+// GLOBAL SCRIPTS
 var _lenis = require("./src/global/lenis");
 var _lenisDefault = parcelHelpers.interopDefault(_lenis);
 const parceled = true;
+// * Testing parcel app
 alert(" Your Parcel.js based Webflow development environment is up and running! \uD83D\uDC4D ");
 (0, _lenisDefault.default)();
-// PAGE RELATED SCRIPTS
+// ! PAGE RELATED SCRIPTS
+// Home page
 const isHome = document.querySelector("body").classList.contains("body--home");
 if (isHome) (0, _homeDefault.default)();
+// About page
+const isAbout = document.querySelector("body").classList.contains("body--about");
+if (isAbout) about();
+// Work page
+const isWork = document.querySelector("body").classList.contains("body--work");
+if (isWork) work();
+// Services page
+const isServices = document.querySelector("body").classList.contains("body--services");
+if (isServices) services();
+// Career page
+const isCareer = document.querySelector("body").classList.contains("body--career");
+if (isCareer) career();
 
 },{"./src/pages/Home/home":"hEzg2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./src/styles/style.css":"cy7Le","./src/global/lenis":"gPIwU"}],"hEzg2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

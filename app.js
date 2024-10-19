@@ -4,10 +4,12 @@
 // ▄█ ░█░ █▀█ █▀▄ ░█░ ██▄ █▀▄   ░█░ ██▄ █░▀░█ █▀▀ █▄▄ █▀█ ░█░ ██▄
 
 const parceled = true
+
+// * Testing parcel app
 alert(' Your Parcel.js based Webflow development environment is up and running! 👍 ');
 
+// * Import custom Styles
 import "./src/styles/style.css"
-// import gsap from 'gsap'  // TODO [import GSAP have to import in the function's js file]
 
 import home from "./src/pages/Home/home";
 
@@ -16,12 +18,38 @@ import home from "./src/pages/Home/home";
 // TODO don't forget to register plugins if you want to use GSAP
 //gsap.registerPlugin(ScrollTrigger, Flip);
 
-//GLOBAL SCRIPTS
+// GLOBAL SCRIPTS
 import initLenis from "./src/global/lenis";
 initLenis();
 
-// PAGE RELATED SCRIPTS
+// ! PAGE RELATED SCRIPTS
+
+// Home page
 const isHome = document.querySelector("body").classList.contains("body--home");
 if (isHome) {
   home();
+}
+
+// About page
+const isAbout = document.querySelector("body").classList.contains("body--about");
+if (isAbout) {
+  about();
+}
+
+// Work page
+const isWork = document.querySelector("body").classList.contains("body--work");
+if (isWork) {
+  work();
+}
+
+// Services page
+const isServices = document.querySelector("body").classList.contains("body--services");
+if (isServices) {
+  services();
+}
+
+// Career page
+const isCareer = document.querySelector("body").classList.contains("body--career");
+if (isCareer) {
+  career();
 }
