@@ -1,6 +1,4 @@
 {
-    "extends": "@parcel/config-default",
-    "transformers": {
-        "/public": ["@parcel/transformer-raw"]
-    }
-}
+    "extends": ["@parcel/config-default"],
+    "reporters":  ["...", "parcel-reporter-static-files-copy"]
+  }
