@@ -9,4 +9,8 @@ I've already installed some dependencies:
 - Swiper JS
 - SplitType
 - Lenis
-- Rimram
+- Rimraf
+
+## Bugs I had
+Here are the bug I had and how I solved them
+### 

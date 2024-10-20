@@ -2,54 +2,43 @@
 // █▀░ █▄▄ █▄█ █ █▄▀   ▀▄▀▄▀ ██▄ █▄█ █▀░ █▄▄ █▄█ ▀▄▀▄▀   █▄█ ▄█
 // █▀ ▀█▀ ▄▀█ █▀█ ▀█▀ █▀▀ █▀█   ▀█▀ █▀▀ █▀▄▀█ █▀█ █░░ ▄▀█ ▀█▀ █▀▀
 // ▄█ ░█░ █▀█ █▀▄ ░█░ ██▄ █▀▄   ░█░ ██▄ █░▀░█ █▀▀ █▄▄ █▀█ ░█░ ██▄
+// Initialize Parcel.js with Webflow
+alert('Your Parcel.js based Webflow development environment is up and running! 👍');
 
-const parceled = true
+// Import custom styles
+import "./src/styles/style.css";
 
-// * Testing parcel app
-alert(' Your Parcel.js based Webflow development environment is up and running! 👍 ');
-
-// * Import custom Styles
-import "./src/styles/style.css"
-
-import home from "./src/pages/Home/home";
-
-// import ScrollTrigger from 'gsap/ScrollTrigger'  // TODO [import GSAP have to import in the function's js file]
-
-// TODO don't forget to register plugins if you want to use GSAP
-//gsap.registerPlugin(ScrollTrigger, Flip);
-
-// GLOBAL SCRIPTS
+// Import global scripts
 import initLenis from "./src/global/lenis";
 initLenis();
 
-// ! PAGE RELATED SCRIPTS
+// Import page-specific scripts
+import home from "./src/pages/Home/home";
+import about from "./src/pages/About/about";
+import work from "./src/pages/Work/work";
+import services from "./src/pages/Services/services";
+import career from "./src/pages/Career/career";
 
-// Home page
-const isHome = document.querySelector("body").classList.contains("body--home");
-if (isHome) {
-  home();
-}
+// Function to initialize page-specific scripts
+const initializePageScripts = () => {
+  const pages = [
+    { className: 'body--home', initFunction: home },
+    { className: 'body--about', initFunction: about },
+    { className: 'body--work', initFunction: work },
+    { className: 'body--services', initFunction: services },
+    { className: 'body--career', initFunction: career }
+  ];
 
-// About page
-const isAbout = document.querySelector("body").classList.contains("body--about");
-if (isAbout) {
-  about();
-}
+  pages.forEach(page => {
+    if (document.querySelector('body').classList.contains(page.className)) {
+      page.initFunction();
+    }
+  });
+};
 
-// Work page
-const isWork = document.querySelector("body").classList.contains("body--work");
-if (isWork) {
-  work();
-}
+// Execute page-specific scripts
+initializePageScripts();
 
-// Services page
-const isServices = document.querySelector("body").classList.contains("body--services");
-if (isServices) {
-  services();
-}
-
-// Career page
-const isCareer = document.querySelector("body").classList.contains("body--career");
-if (isCareer) {
-  career();
-}
+// TODO: Import and register GSAP plugins in the relevant function files
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// gsap.registerPlugin(ScrollTrigger, Flip);
