@@ -4,8 +4,9 @@
   "description": "Webflow development environment",
   "main": "app.js",
   "scripts": {
-    "start": "parcel app.js --hmr-port 50619",
-    "build": "parcel build"
+    "dev": "parcel app.js --hmr-port 50619",
+    "build": "parcel build app.js",
+    "clean": "rimraf -rf dist"
   },
   "repository": {
     "type": "git",
