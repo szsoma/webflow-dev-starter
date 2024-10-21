@@ -2,7 +2,6 @@
   "name": "webflow-dev-starter",
   "version": "1.0.0",
   "description": "Webflow development environment",
-  "main": "dist/app.js",
   "scripts": {
     "dev": "parcel app.js --hmr-port 50619",
     "build": "parcel build app.js",

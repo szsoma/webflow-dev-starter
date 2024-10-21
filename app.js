@@ -4,7 +4,7 @@
 // ▄█ ░█░ █▀█ █▀▄ ░█░ ██▄ █▀▄   ░█░ ██▄ █░▀░█ █▀▀ █▄▄ █▀█ ░█░ ██▄
 
 // Initialize Parcel.js with Webflow
-alert('Your Parcel.js based Webflow development environment is up and running! 👍');
+alert('Your stunning Parcel.js based Webflow development environment is up and running! 👍');
 
 // Import custom styles
 import "./src/styles/style.css";
