@@ -20,6 +20,9 @@
     "parcel": "^2.12.0",
     "parcel-reporter-static-files-copy": "^1.5.3"
   },
+  "staticFiles": {
+    "staticPath": "public"
+  },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.12.5",
