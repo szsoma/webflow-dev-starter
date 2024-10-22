@@ -2,10 +2,10 @@
   "name": "webflow-dev-starter",
   "version": "1.0.0",
   "description": "Webflow development environment",
-  "source": "app.js",
+  "main": "app.js",
   "scripts": {
     "dev": "parcel app.js --hmr-port 50619",
-    "build": "parcel build",
+    "build": "parcel build app.js",
     "clean": "rimraf dist && rimraf .parcel-cache"
   },
   "repository": {
