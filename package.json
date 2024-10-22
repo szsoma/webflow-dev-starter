@@ -8,6 +8,9 @@
     "build": "parcel build app.js",
     "clean": "rimraf dist && rimraf .parcel-cache"
   },
+  "browser": {
+    "jquery": false
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/szsoma/webflow-dev-starter.git"
@@ -19,8 +22,11 @@
   },
   "homepage": "https://github.com/szsoma/webflow-dev-starter#readme",
   "devDependencies": {
+    "@parcel/transformer-glsl": "^2.12.0",
+    "jquery": "^3.7.1",
     "parcel": "^2.12.0",
-    "parcel-reporter-static-files-copy": "^1.5.3"
+    "parcel-reporter-static-files-copy": "^1.5.3",
+    "rimraf": "^6.0.1"
   },
   "staticFiles": {
     "staticPath": "public"
@@ -28,9 +34,7 @@
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.12.5",
-    "jquery": "^3.7.1",
     "punycode": "^2.3.1",
-    "rimraf": "^6.0.1",
     "split-type": "^0.3.4",
     "swiper": "^11.1.14"
   }

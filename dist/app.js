@@ -588,10 +588,9 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 // █▀░ █▄▄ █▄█ █ █▄▀   ▀▄▀▄▀ ██▄ █▄█ █▀░ █▄▄ █▄█ ▀▄▀▄▀   █▄█ ▄█
 // █▀ ▀█▀ ▄▀█ █▀█ ▀█▀ █▀▀ █▀█   ▀█▀ █▀▀ █▀▄▀█ █▀█ █░░ ▄▀█ ▀█▀ █▀▀
 // ▄█ ░█░ █▀█ █▀▄ ░█░ ██▄ █▀▄   ░█░ ██▄ █░▀░█ █▀▀ █▄▄ █▀█ ░█░ ██▄
-// Initialize Parcel.js with Webflow | Don't forget to delete or comment this line after project setup! ;) 
-// alert('Your Parcel.js based Webflow development environment is up and running! 👍');
-// Import custom styles
+// Variable for checking if dev server is running
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+// Import custom styles
 var _styleCss = require("./src/styles/style.css");
 // Import global scripts
 var _lenis = require("./src/global/lenis");
@@ -611,6 +610,9 @@ var _services = require("./src/pages/services/services");
 var _servicesDefault = parcelHelpers.interopDefault(_services);
 var _career = require("./src/pages/career/career");
 var _careerDefault = parcelHelpers.interopDefault(_career);
+const parceled = true;
+// Initialize Parcel.js with Webflow | Don't forget to delete or comment this line after project setup! ;) 
+alert("Your Parcel.js based Webflow development environment is up and running! \uD83D\uDC4D");
 (0, _lenisDefault.default)();
 (0, _navDefault.default)();
 (0, _footerDefault.default)();
