@@ -44,7 +44,7 @@ Paste this script in the `Before </body> tag` part of the Webflow custom code in
 if(typeof parceled === 'undefined') {
 		let script = document.createElement('script')
 		script.type = 'text/javascript'
-		script.src = 'https://webflow-dev-starter.vercel.app/app.js';
+		script.src = 'https://[YOUR-PROJECT-NAME].vercel.app/app.js';
 		document.head.appendChild(script)
 	}
 //checks if the parceled variable from app.js is undefined - meaning local host isn't up and running

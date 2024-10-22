@@ -3,6 +3,9 @@
 // █▀ ▀█▀ ▄▀█ █▀█ ▀█▀ █▀▀ █▀█   ▀█▀ █▀▀ █▀▄▀█ █▀█ █░░ ▄▀█ ▀█▀ █▀▀
 // ▄█ ░█░ █▀█ █▀▄ ░█░ ██▄ █▀▄   ░█░ ██▄ █░▀░█ █▀▀ █▄▄ █▀█ ░█░ ██▄
 
+// Variable for checking if dev server is running
+const parceled = true
+
 // Initialize Parcel.js with Webflow | Don't forget to delete or comment this line after project setup! ;) 
 alert('Your Parcel.js based Webflow development environment is up and running! 👍');
 
