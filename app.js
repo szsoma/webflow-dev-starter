@@ -14,11 +14,11 @@ import initLenis from "./src/global/lenis";
 initLenis();
 
 // Import page-specific scripts
-import home from "./src/pages/Home/home";
-import about from "./src/pages/About/about";
-import work from "./src/pages/Work/work";
-import services from "./src/pages/Services/services";
-import career from "./src/pages/Career/career";
+import home from "./src/pages/home/home";
+import about from "./src/pages/about/about";
+import work from "./src/pages/work/work";
+import services from "./src/pages/services/services";
+import career from "./src/pages/career/career";
 
 // Function to initialize page-specific scripts
 const initializePageScripts = () => {
