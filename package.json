@@ -5,7 +5,7 @@
   "source": "app.js",
   "scripts": {
     "dev": "parcel app.js --hmr-port 50619",
-    "build": "parcel build app.js --external jquery",
+    "build": "parcel build app.js",
     "clean": "rimraf dist && rimraf .parcel-cache"
   },
   "repository": {
