@@ -20,7 +20,7 @@ You can find a simple example of a Webflow site using this setup here. This code
 
 ## Pre installed tools
 I've already installed some most used dependencies:
-- jQuery
+- jQuery (excluded from the build)
 - GSAP
 - Swiper JS
 - SplitType

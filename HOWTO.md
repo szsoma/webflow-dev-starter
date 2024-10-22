@@ -22,15 +22,24 @@ If you're using an ad blocker or the Brave browser, you’ll need to disable it 
 
 ## Step 1: Installation and initialization 💽
 1. Go to the template: [https://github.com/szsoma/webflow-dev-starter](https://github.com/szsoma/webflow-dev-starter)
-2. Clone the repo by clicking on "Use this template" and configure your new repo with the name of your project.
-3. Open your new repository with GitHub Desktop app by clicking on `<> Code → Open with GitHub Desktop`
-4. Open your project folder in VS Code and run `npm i` command in terminal
+2. Clone the repository by selecting  **"Use this template"**  and create a new repository, naming it after your project.
+3. Open the new repository in GitHub Desktop by clicking  **`<> Code → Open with GitHub Desktop`**.
+4. In VS Code, open your project folder and run the command  `npm i`  in the terminal to install dependencies.
 
-## Step 2: Coding
+## Step 2: Start Coding
+1. Now, you're ready to begin coding! Open the  `app.js`  file in your project folder—this will serve as the input file for your project.
+2. To start the dev server, open a terminal at the root of the project and run the  `npm run dev`  command You can see your generated JS files at  `http://localhost:1234/app.js`
+
+> **Note:**  jQuery is already included in the project but won’t be added to the final build since Webflow provides it by default on all sites.
+
+## Step 3: Webflow Integration 📝
+Now things are about to get exciting!
+The template will automatically refreshes the page every time you save a JavaScript file, making your workflow more efficient and saving you time.
+
+Paste this script in the `Before </body> tag` part of the Webflow custom code in the project settings so that it loads on all pages. We will change the url of Vercel (or Netlify) later to load the production files.
 ```
 <script src="http://localhost:1234/app.js"></script>  
 <!-- tries to load from local host -->
-
 <script>
 if(typeof parceled === 'undefined') {
 		let script = document.createElement('script')
@@ -42,3 +51,11 @@ if(typeof parceled === 'undefined') {
 //if not loads from the Vercel app
 </script>
 ```
+This script automatically loads the correct JavaScript file based on your environment.
+-   During development, if your dev server is running, it will load the JS files from your local machine.
+-   If the code is pushed to production, and the dev server isn't running, it will load the files from Vercel (or Netlify).
+
+That way you don't have to ping the Webflow dev every time you want to test some code, and you don't have to connect to the Webflow account of the site.
+
+## Step 4: Going into production 🚀
+**1.**  Your code is ready. It's time to push! For this step you will need to  **commit**  and then  **push**  your code to  **GitHub**. You can make this via Github Desktop app easily.

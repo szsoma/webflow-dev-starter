@@ -588,13 +588,18 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 // █▀░ █▄▄ █▄█ █ █▄▀   ▀▄▀▄▀ ██▄ █▄█ █▀░ █▄▄ █▄█ ▀▄▀▄▀   █▄█ ▄█
 // █▀ ▀█▀ ▄▀█ █▀█ ▀█▀ █▀▀ █▀█   ▀█▀ █▀▀ █▀▄▀█ █▀█ █░░ ▄▀█ ▀█▀ █▀▀
 // ▄█ ░█░ █▀█ █▀▄ ░█░ ██▄ █▀▄   ░█░ ██▄ █░▀░█ █▀▀ █▄▄ █▀█ ░█░ ██▄
-// Initialize Parcel.js with Webflow
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+// Initialize Parcel.js with Webflow | Don't forget to delete or comment this line after project setup! ;) 
+// alert('Your Parcel.js based Webflow development environment is up and running! 👍');
 // Import custom styles
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _styleCss = require("./src/styles/style.css");
 // Import global scripts
 var _lenis = require("./src/global/lenis");
 var _lenisDefault = parcelHelpers.interopDefault(_lenis);
+var _nav = require("./src/global/nav");
+var _navDefault = parcelHelpers.interopDefault(_nav);
+var _footer = require("./src/global/footer");
+var _footerDefault = parcelHelpers.interopDefault(_footer);
 // Import page-specific scripts
 var _home = require("./src/pages/home/home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
@@ -606,8 +611,9 @@ var _services = require("./src/pages/services/services");
 var _servicesDefault = parcelHelpers.interopDefault(_services);
 var _career = require("./src/pages/career/career");
 var _careerDefault = parcelHelpers.interopDefault(_career);
-alert("Your stunning Parcel.js based Webflow development environment is up and running! \uD83D\uDC4D");
 (0, _lenisDefault.default)();
+(0, _navDefault.default)();
+(0, _footerDefault.default)();
 // Function to initialize page-specific scripts
 const initializePageScripts = ()=>{
     const pages = [
@@ -641,7 +647,7 @@ initializePageScripts(); // TODO: Import and register GSAP plugins in the releva
  // import { ScrollTrigger } from 'gsap/ScrollTrigger';
  // gsap.registerPlugin(ScrollTrigger, Flip);
 
-},{"./src/styles/style.css":"cy7Le","./src/global/lenis":"gPIwU","./src/pages/home/home":"cIPEi","./src/pages/about/about":"fL9gf","./src/pages/work/work":"9nfro","./src/pages/services/services":"gjwHc","./src/pages/career/career":"erAwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cy7Le":[function() {},{}],"gPIwU":[function(require,module,exports) {
+},{"./src/styles/style.css":"cy7Le","./src/global/lenis":"gPIwU","./src/pages/home/home":"cIPEi","./src/pages/about/about":"fL9gf","./src/pages/work/work":"9nfro","./src/pages/services/services":"gjwHc","./src/pages/career/career":"erAwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./src/global/nav":"9emQb","./src/global/footer":"3EEbG"}],"cy7Le":[function() {},{}],"gPIwU":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _lenis = require("@studio-freight/lenis"); // TODO Add lenis smooth scrolling 
@@ -1068,9 +1074,8 @@ var _gsapDefault = parcelHelpers.interopDefault(_gsap);
 var _scrollTrigger = require("gsap/ScrollTrigger"); // [import GSAP have to import in the function's js file]
 var _scrollTriggerDefault = parcelHelpers.interopDefault(_scrollTrigger);
 function home() {
-    console.log((0, _gsapDefault.default)); // -- Check if it is okay
-    console.log((0, _scrollTriggerDefault.default)) // -- Check if it is okay
-    ;
+// console.log(gsap);   // -- Check if it is okay
+// console.log(ScrollTrigger)   // -- Check if it is okay
 }
 exports.default = home;
 
@@ -7325,59 +7330,45 @@ _getGSAP() && gsap.registerPlugin(Observer);
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fL9gf":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _gsap = require("gsap"); // [import GSAP have to import in the function's js file]
-var _gsapDefault = parcelHelpers.interopDefault(_gsap);
-var _scrollTrigger = require("gsap/ScrollTrigger"); // [import GSAP have to import in the function's js file]
-var _scrollTriggerDefault = parcelHelpers.interopDefault(_scrollTrigger);
-function about() {
-    console.log((0, _gsapDefault.default)); // -- Check if it is okay
-    console.log((0, _scrollTriggerDefault.default)) // -- Check if it is okay
-    ;
-}
+function about() {}
 exports.default = about;
 
-},{"gsap":"fPSuC","gsap/ScrollTrigger":"7wnFk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9nfro":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9nfro":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _gsap = require("gsap"); // [import GSAP have to import in the function's js file]
-var _gsapDefault = parcelHelpers.interopDefault(_gsap);
-var _scrollTrigger = require("gsap/ScrollTrigger"); // [import GSAP have to import in the function's js file]
-var _scrollTriggerDefault = parcelHelpers.interopDefault(_scrollTrigger);
-function work() {
-    console.log((0, _gsapDefault.default)); // -- Check if it is okay
-    console.log((0, _scrollTriggerDefault.default)) // -- Check if it is okay
-    ;
-}
+function work() {}
 exports.default = work;
 
-},{"gsap":"fPSuC","gsap/ScrollTrigger":"7wnFk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gjwHc":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gjwHc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _gsap = require("gsap"); // [import GSAP have to import in the function's js file]
-var _gsapDefault = parcelHelpers.interopDefault(_gsap);
-var _scrollTrigger = require("gsap/ScrollTrigger"); // [import GSAP have to import in the function's js file]
-var _scrollTriggerDefault = parcelHelpers.interopDefault(_scrollTrigger);
-function services() {
-    console.log((0, _gsapDefault.default)); // -- Check if it is okay
-    console.log((0, _scrollTriggerDefault.default)) // -- Check if it is okay
-    ;
-}
+function services() {}
 exports.default = services;
 
-},{"gsap":"fPSuC","gsap/ScrollTrigger":"7wnFk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"erAwr":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"erAwr":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _gsap = require("gsap"); // [import GSAP have to import in the function's js file]
-var _gsapDefault = parcelHelpers.interopDefault(_gsap);
-var _scrollTrigger = require("gsap/ScrollTrigger"); // [import GSAP have to import in the function's js file]
-var _scrollTriggerDefault = parcelHelpers.interopDefault(_scrollTrigger);
-function career() {
-    console.log((0, _gsapDefault.default)); // -- Check if it is okay
-    console.log((0, _scrollTriggerDefault.default)) // -- Check if it is okay
-    ;
-}
+function career() {}
 exports.default = career;
 
-},{"gsap":"fPSuC","gsap/ScrollTrigger":"7wnFk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["7XE4H","igcvL"], "igcvL", "parcelRequire7aed")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9emQb":[function(require,module,exports) {
+// import { gsap } from "gsap";
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function nav() {
+    $(".nav_description").on("click", function() {
+        $(this).toggleClass("is-test");
+    });
+}
+exports.default = nav;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3EEbG":[function(require,module,exports) {
+// import { gsap } from "gsap";
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function footer() {}
+exports.default = footer;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["7XE4H","igcvL"], "igcvL", "parcelRequire7aed")
 
 //# sourceMappingURL=app.js.map

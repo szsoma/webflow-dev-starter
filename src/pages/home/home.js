@@ -3,8 +3,8 @@ import ScrollTrigger from 'gsap/ScrollTrigger'  // [import GSAP have to import i
 
 function home()
 {
-    console.log(gsap);   // -- Check if it is okay
-    console.log(ScrollTrigger)   // -- Check if it is okay
+    // console.log(gsap);   // -- Check if it is okay
+    // console.log(ScrollTrigger)   // -- Check if it is okay
 }
 
 export default home

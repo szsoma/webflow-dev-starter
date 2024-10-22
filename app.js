@@ -3,8 +3,8 @@
 // █▀ ▀█▀ ▄▀█ █▀█ ▀█▀ █▀▀ █▀█   ▀█▀ █▀▀ █▀▄▀█ █▀█ █░░ ▄▀█ ▀█▀ █▀▀
 // ▄█ ░█░ █▀█ █▀▄ ░█░ ██▄ █▀▄   ░█░ ██▄ █░▀░█ █▀▀ █▄▄ █▀█ ░█░ ██▄
 
-// Initialize Parcel.js with Webflow
-alert('Your stunning Parcel.js based Webflow development environment is up and running! 👍');
+// Initialize Parcel.js with Webflow | Don't forget to delete or comment this line after project setup! ;) 
+alert('Your Parcel.js based Webflow development environment is up and running! 👍');
 
 // Import custom styles
 import "./src/styles/style.css";
@@ -12,6 +12,12 @@ import "./src/styles/style.css";
 // Import global scripts
 import initLenis from "./src/global/lenis";
 initLenis();
+
+import nav from "./src/global/nav";
+nav();
+
+import footer from "./src/global/footer";
+footer();
 
 // Import page-specific scripts
 import home from "./src/pages/home/home";
