@@ -33,11 +33,29 @@ Add your files to the `/public` folder
 ## How to use with Webflow
 [Check the documentation here ↳](HOWTO.md)
 
+## Building and running on localhost
+First, install dependencies:
+	```
+	npm i
+	```
+To launch a local dev server:
+	```
+	npm run dev
+	```
+To create a production build:
+	```
+	npm run build
+	```
+To clean the local /dist folder and parcel cache:
+	```
+	npm run clean
+	```
+
 ## Bugs I had
 Here are the bug I had and how I solved them
  1. **The punycode module is deprecated.**
 	Just downgrade Node to 20.10.0, it is depreciated in `21.5.0`.
 	```
-	nvm install 20.10.
+	nvm install 20.10.0
 	nvm use 20.10.0
 	```

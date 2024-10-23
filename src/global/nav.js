@@ -1,4 +1,4 @@
-// import { gsap } from "gsap";
+// jQuery test
 
 function nav() {
     $('.nav_description').on('click', function() {

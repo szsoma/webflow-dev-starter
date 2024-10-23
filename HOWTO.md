@@ -58,4 +58,12 @@ This script automatically loads the correct JavaScript file based on your enviro
 That way you don't have to ping the Webflow dev every time you want to test some code, and you don't have to connect to the Webflow account of the site.
 
 ## Step 4: Going into production 🚀
-**1.**  Your code is ready. It's time to push! For this step you will need to  **commit**  and then  **push**  your code to  **GitHub**. You can make this via Github Desktop app easily.
+1.  Your code is ready. Now it's time to push! For this step, you need to **commit** and then **push** your code to **GitHub**. You can easily do this using the Github desktop application.
+2. Create an account on **Vercel** (or Netlify) and set up a project. Choose the GitHub and select your project repository. Then, click Deploy site. BOOM! Your project is now live!
+3. **Customizing the Domain Name:** You can change the domain name. To do this, navigate to `Domains`. You'll see your current domain and an `Edit` button. Click it change the domain name. I recommend using the final site name to easily distinguish between projects later.
+Now, you can access your JavaScript files at your custom Netlify URL:
+```
+https://[YOUR-PROJECT-NAME].vercel.app/app.js
+```
+🙌 Nicely done!
+From now on, whenever you push code to GitHub, Vercel will automatically build and deploy the latest version of your project. 🙌
